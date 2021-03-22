@@ -26,7 +26,10 @@ const personSchema = new mongoose.Schema({
         type: String,
         required: true,
         validate: {
-            validator: v => v.replaceAll(/[^\d]/g, '').length > 8,
+            validator: v => {
+                console.log(v);
+                return v.replaceAll(/[^\d]/g, '').length > 8
+            },
             message: 'number must have at least 8 digits'
         },
     }
