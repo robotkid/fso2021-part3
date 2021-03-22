@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "15.x"
+  }
   "scripts": {
     "build:ui": "rm -rf build && cd ../phonebook/ && npm run build --prod && cp -a build ../phonebook-backend",
     "start": "node index.js",
